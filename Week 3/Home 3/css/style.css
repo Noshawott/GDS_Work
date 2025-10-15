@@ -1,0 +1,73 @@
+#bg{
+    background-color: steelblue;
+    min-height:  5000px;
+    border: 2px solid red;
+}
+
+#header{
+    text-align: center;
+    text-shadow: 2px 2px 2px black;
+    color: white;
+    font-size: 30px;
+}
+#nav-bar{
+    height: 50px;
+    margin: auto;
+    padding: 10px;
+    text-align: center;
+    border: 2px solid black;
+    margin-top: 5px;
+    margin-bottom: 5px;
+}
+#mainText{
+    background-color: lightgray;
+    text-align: center;
+    font-size: 50px;
+    border: 2px solid aqua;
+    min-height: 500px;
+}
+#b1{
+    height: 50px;
+    background-color: violet;
+}
+#b2{
+    height: 50px;
+    background-color: lightblue;
+}
+#b3{
+    height: 50px;
+    background-color: lightgreen;
+}
+#b4{
+    height: 50px;
+    background-color: lightcoral;
+}
+#b1:hover
+{
+    animation: buttons 2s;
+}
+#b2:hover
+{
+    animation: buttons 2s;
+}
+
+#b3:hover
+{
+    animation: buttons 2s;
+}
+
+#b4:hover
+{
+    animation: buttons 2s;
+}
+
+
+
+@keyframes buttons {
+    from{
+        border: 2px solid white;
+    }
+    to{
+        border: 2px solid black;
+    }
+}

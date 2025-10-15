@@ -1,0 +1,116 @@
+body{
+    background-color: black;
+
+
+}
+#bg{
+    background-color: aqua;
+    border: 3px solid white;
+    text-align:  center;
+    padding: 25px;
+}
+
+#wrapper{
+    margin:auto;
+    width: 500px;
+    border:2px solid white;
+    padding: 10px;
+}
+
+#header{
+    border: 4px solid salmon;
+    min-height: 200px;
+    padding: 25px;
+    min-height: 100px;
+}
+#hello{
+    font-size: 55px;
+    color: maroon;
+    text-align: center;
+    text-shadow: 2px 2px 2px black;
+    line-height: 100px;
+}
+#nav-bar{
+    height: 50px;
+    margin: auto;
+    padding: 5px;
+    border: 2px solid brown;
+    margin-top: 5px;
+    margin-bottom: 5px;
+    animation: nav 1s infinite alternate;
+}
+#mainContent{
+    border: 2px solid black;
+    min-height:  500px;
+    min-width: 500px;
+}
+#frogContainer{
+    background-color: black;
+    min-height: 500px;
+    color: teal
+}
+#frog{
+    border: 4px solid white;
+}
+#frog:hover{
+    width:70%;
+}
+#one{
+    border: 1px solid white;
+}
+#two{
+    border: 1px solid white;
+}
+
+#three{
+    border: 1px solid white;
+}
+
+#frogText{
+    animation-name: percent;
+    animation-duration: 2s;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+}
+
+.buttonDesign{
+    width: 200px;
+    border: 2px solid green;
+    text-align: center;
+    line-height: 50px;
+    text-decoration: none;
+    padding: 10px;
+    margin-right: 10px;
+    margin-left: 10px;
+    box-shadow: 3px 5px 10px black;
+}
+
+@keyframes nav{
+    from{
+        border: 2px solid brown;
+    }
+    to{
+        border : 5px solid white;
+    }
+}
+
+@keyframes percent{
+    0%{color: black; transform: translateX(0px);}
+    25%{
+        color: yellowgreen;
+        transform: translateX(50px);
+    }
+    50%{color: bisque; transform: translateX(-50px);}
+    75%{color: goldenrod}
+    100%{color: teal}
+}
+
+
+@keyframes textAnimation{
+    from{
+        color: black;
+    }
+    to{
+        color: palevioletred;
+    }
+}
