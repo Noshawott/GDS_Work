@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang = "en">
+    <head>
+        <meta charset = "UTF-8">
+        <meta name = "viewport" content = "witdh=device-width, initial-scale=1.0">
+        <meta name = "author" content = "Noah">
+        <meta name = "description" content = "week 3 classwork 2">
+        <title>Canvas Lab</title>
+    </head>
+    <body>
+        <h1>Cavas Lab</h1>
+        <canvas id = "can" width = "800" height = "600" style = "border: 1px solid"></canvas>
+
+        <script>
+           var canvas = document.getElementById("can");
+           var ctx = canvas.getContext("2d");
+           ctx.fillStyle = "#C0DA74";
+           ctx.fillRect(20,20,50,100);
+
+           ctx.strokeStyle = "#4FB286";
+           ctx.beginPath();
+           ctx.moveTo(0,0);
+           ctx.lineTo(800,600);
+           ctx.lineTo(800,0);
+           ctx.lineTo(0, 600);
+           ctx.lineTo(0,0);
+           ctx.stroke();
+
+           ctx.beginPath();
+           ctx.arc(200, 100, 50, 0, Math.PI * 2);
+           ctx.fillStyle = "red";
+           ctx.fill();
+           ctx.stroke();
+
+            ctx.strokeStyle = "blanchedAlmond";
+            ctx.beginPath();
+            ctx.lineTo(400,20);
+            ctx.lineTo(400, 600);
+            ctx.stroke();
+
+            ctx.strokeStyle = "#FFB7C3";
+            ctx.fillStyle = "#D3FAC7";
+            ctx.beginPath();
+            ctx.moveTo(400, 20);
+            ctx.lineTo(450, 100);
+            ctx.lineTo(400, 120);
+            ctx.lineTo(350,100);
+            ctx.closePath();
+            ctx.fill();
+            ctx.stroke();
+
+           ctx.beginPath();
+           ctx.arc(200, 300, 100, 0, Math.PI * 2);
+           ctx.fillStyle = "yellow";
+           ctx.fill();
+           ctx.stroke();
+
+           ctx.beginPath();
+           ctx.arc(170, 270, 20, 0, Math.PI * 2);
+           ctx.fillStyle = "black";
+           ctx.fill();
+           ctx.stroke();
+
+           ctx.beginPath();
+           ctx.arc(240, 270, 20, 0, Math.PI * 2);
+           ctx.fillStyle = "black";
+           ctx.fill();
+           ctx.stroke();
+
+
+            ctx.strokeStyle = "black";
+            ctx.beginPath();
+            ctx.moveTo(170, 320);
+            ctx.lineTo(190, 340);
+            ctx.lineTo(220, 340);
+            ctx.lineTo(240, 320);
+            ctx.stroke();
+
+        </script>
+
+    </body>

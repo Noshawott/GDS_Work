@@ -1,0 +1,63 @@
+#bg{
+    background-color:lightgreen;
+}
+#header{
+    color:navy;
+}
+#shapeTitle{
+    color:forestgreen;
+}
+
+#sq{
+    background-color: lightcoral;
+}
+#sq:hover{
+    animation: buttons 2s;
+}
+
+#cir{
+    background-color: lightblue;
+}
+#cir:hover{
+    animation: buttons 2s;
+}
+
+#sta{
+    background-color: gold;
+}
+#sta:hover{
+    animation: buttons 2s;
+}
+
+#pent{
+    background-color: lightseagreen;
+}
+#pent:hover{
+    animation: buttons 2s;
+}
+
+#lin{
+    background-color: lightslategray;
+}
+#lin:hover{
+    animation: buttons 2s;
+}
+
+#cl{
+    background-color: black;
+    color: white;
+}
+#cl:hover{
+    animation: buttons 2s;
+}
+
+
+
+@keyframes buttons {
+    from{
+        border: 2px solid white;
+    }
+    to{
+        border: 2px solid black;
+    }
+}
