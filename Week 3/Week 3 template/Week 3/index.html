@@ -68,8 +68,8 @@
     ctx.lineWidth = 5;
     ctx.strokeStyle = "black";
     ctx.fillStyle = "yellow";
-    ctx.strokeRect(20,20,100,100);
-    ctx.fillRect(20,20,100,100);
+    ctx.strokeRect(86,303,100,100);
+    ctx.fillRect(86,303,100,100);
 })
 
 circle.addEventListener("click", function()
@@ -78,24 +78,24 @@ circle.addEventListener("click", function()
     ctx.strokeStyle = "red";
     ctx.fillStyle = "#ffff00";
     ctx.beginPath();
-    ctx.arc(200, 70, 50, 0, Math.PI * 2);
+    ctx.arc(386, 442, 60, 0, Math.PI * 2);
     ctx.fill();
     ctx.stroke();
 })
 star.addEventListener("click", function()
 {
     ctx.beginPath();
-    ctx.moveTo(365, 20);
-    ctx.lineTo(340, 50);
-    ctx.lineTo(290, 70);
-    ctx.lineTo(340, 90);
-    ctx.lineTo(320, 140);
-    ctx.lineTo(360, 100);
-    ctx.lineTo(370, 140);
-    ctx.lineTo(390, 90);
-    ctx.lineTo(420, 70);
-    ctx.lineTo(390, 50);
-    ctx.lineTo(365, 20);
+    ctx.moveTo(636, 497);
+    ctx.lineTo(611, 527);
+    ctx.lineTo(561, 547);
+    ctx.lineTo(611, 567);
+    ctx.lineTo(591, 617);
+    ctx.lineTo(631, 577);
+    ctx.lineTo(641, 617);
+    ctx.lineTo(661, 567);
+    ctx.lineTo(691, 547);
+    ctx.lineTo(661, 527);
+    ctx.lineTo(636, 497);
     ctx.closePath();
     ctx.fillStyle = "#ffff00";
     ctx.fill();
@@ -107,12 +107,12 @@ star.addEventListener("click", function()
 pentagon.addEventListener("click", function()
 {
     ctx.beginPath();
-    ctx.moveTo(540, 20);
-    ctx.lineTo(500, 60);
-    ctx.lineTo(500, 120);
-    ctx.lineTo(580, 120);
-    ctx.lineTo(580, 60);
-    ctx.lineTo(540, 20);
+    ctx.moveTo(558, 309);
+    ctx.lineTo(518, 349);
+    ctx.lineTo(518, 409);
+    ctx.lineTo(598, 409);
+    ctx.lineTo(598, 349);
+    ctx.lineTo(558, 309);
     ctx.closePath();
     ctx.fillStyle = "#FF00FF";
     ctx.fill();
@@ -129,7 +129,7 @@ line.addEventListener("click", function()
     ctx.stroke();
 })
 
-    //line up coords: circle: 386, 442. Square: 86, 303. Pentagon; 558, 309. Star: 636, 497.
+    //line up coords: Star: 636, 497.
 
     clear.addEventListener("click", function()
 {
