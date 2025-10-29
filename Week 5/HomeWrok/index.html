@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Plinko for cookie clicker</title>
+  <script src="js/main.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.6.0/p5.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/matter-js/0.19.0/matter.min.js"></script>
+</head>
+<body>
+    <script>
+        const {Engine, World, Bodies, Render, Runner, Body, Events } = Matter;
+        let engine, world;
+        let pegs = [];
+        let balls = [];
+        let ground;
+
+        function setup()
+        {
+            createCanvas(600, 800);
+            engine = Engine.create();
+            world = engine.world;
+
+            const cols = 10;
+            const rows = 10;
+            const spacing = width / cols;
+
+
+            for (let j = 0; j < rows; j++) {
+                for (let i = 0; i < cols; i++) {
+                    const x = i * spacing + spacing / 2;
+                    const y = j * spacing + spacing / 2;
+                    if (j % 2 === 0) {
+                        pegs.push(new Peg(x, y));
+                    } else {
+                        pegs.push(new Peg(x + spacing / 2, y));
+                    }
+                }
+            }
+            ground = Bodies.rectangle(width / 2, height + 50, width, 100, {
+            isStatic: true,
+        });
+        World.add(world, ground);
+
+        Engine.run(engine);       
+        }
+
+        function draw()
+        {
+            background(50);
+
+            for(let peg of pegs)
+            {
+                peg.show();
+            }
+            for(let ball of balls)
+            {
+                ball.show();
+            }
+            fill(200);
+            rectMode(CENTER);
+            rect(ground.position.x, ground.position.y, width, 100);
+        }
+        function mousePressed()
+        {
+            balls.push(new Ball(mouseX, 50));
+        }
+
+        class Peg
+        {
+            constructor(x, y)
+            {
+                this.body = Bodies.circle(x, y, 10, { isStatic: true});
+                World.add(world, this.body);
+            }
+            show()
+            {
+                const pos = this.body.position;
+                fill(255);
+                noStroke();
+                ellipse(pos.x, pos.y, 20);
+            }
+        }
+
+        class Ball
+        {
+            constructor(x, y)
+            {
+                this.body = Bodies.circle(x, y, 15, { restitution: 0.7});
+                World.add(world, this.body);
+            }
+            show()
+            {
+                const pos = this.body.position;
+                fill(200, 0, 200);
+                noStroke();
+                ellipse(pos.x, pos.y, 30);
+            }
+        }
+    </script>
+</body>
